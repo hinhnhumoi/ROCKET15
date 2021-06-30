@@ -145,4 +145,16 @@ INSERT INTO ExamQuestion VALUES 											(1,1),
                                                                             (4,4),
                                                                             (5,5);
                                                                             
-select * from exam;
+select * from department;
+select departmentID from department where departmentName='sales';
+select accountID,username,fullname, char_length(fullname) as Name_lenght from `Account`  order by Name_lenght DESC  limit 1;
+select accountID,username,fullname, char_length(fullname) as Name_lenght from `Account` where departmentID=3  order by Name_lenght DESC  limit 1; 
+select groupName,createDate from `Group` where createDate>'2019-12-20';
+select questionID, count(*) as Answer_numb from `answer` group by questionID having Answer_numb>=4;
+select `code`, duration,createDate from Exam where createDate>'2019-12-20' and duration>='00:04:00';
+select groupName,createDate from `group` order by createDate desc limit 5;
+select departmentID,count(*) as total, group_concat(fullname) from `account` where departmentID=2;
+select fullname from `account` where fullname like 'D%o';
+delete from exam where createDate<'2019-12-20';
+delete from question where content like 'câu hỏi%';
+update `Account` set fullname=N'Nguyễn Bá Lộc' and email='loc.nguyenba@vti.com.vn' where accountID=5;

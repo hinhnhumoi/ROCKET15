@@ -46,8 +46,8 @@ VALUES				( 'Nguyen Van A','2000-01-28','male',10,15,20,'Class1'),
                     ( 'Nguyen Van I','2000-11-02','unknown',13,15,7,'Class3'),
                     ( 'Nguyen Thi J','2000-10-11','female',10,8,12,'Class1');
 SELECT * FROM Trainee;
-SELECT TraineeID,Full_Name,Gender,MAX(LENGTH(Full_name)) AS 'Do Dai Ten',YEAR(CURDATE()) - YEAR(Birth_Date) AS 'Tuoi' FROM Trainee;
-SELECT * FROM Trainee WHERE (ET_IQ+ET_Gmath)>=20 AND ET_IQ>=8 AND ET_Gmath>=8 AND ET_English>=18;
-DELETE FROM Trainee WHERE traineeID=3;
-UPDATE Trainee SET Training_Class='Class4' WHERE traineeID=5;
-SELECT month(Birth_Date), group_concat(Full_name) as List_trainee from Trainee group by month(Birth_Date);
+SELECT month(Birth_date), count(*) as total , group_concat(Full_name) as list_trainee from trainee group by month(Birth_date);
+select Full_name, 2021- year(birth_date), char_length(Full_name) from trainee order by char_length(Full_name) desc limit 1;
+SELECT * FROM trainee where ET_IQ >= 8 AND ET_Gmath >=8 AND ET_English >= 18 AND (ET_IQ + ET_Gmath) >= 20;
+delete from trainee where TraineeID=3;
+update Trainee set training_Class ='class2' where TraineeID=3;
