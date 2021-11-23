@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="table-wrapper">
+        <div class="table-title">
+
+            <h1 style="text-align: center;">User <b>View List</b></h1>
+            
+            <div class="row">
+                <br> <br>
+                <!-- <div>
+                    Min createDate: <input type="date" id="minCreateDate" name="minCreateDate" onchange="changeMinCreateDate(event)">
+                    Max createDate: <input type="date" id="maxCreateDate" name="maxCreateDate" onchange="changeMaxCreateDate(event)" >
+                </div> -->
+
+                <input type="text" onkeyup="handleKeyUpEventForUserSearching(event)" id="input-search-user" placeholder="Search for user's fullname.." title="Type in a name">
+                <button type="button" class="btn btn-info add-new" onclick="handleUserSearch()">Search</button>
+                <button type="button" class="btn btn-info add-new" onclick="refreshUserTable()">Refresh</button>
+
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID <i class="fa fa-fw fa-sort" id="heading-user-id" onclick="changeUserSort('id')" ></i> </th>
+                    <th>Full Name <i class="fa fa-fw fa-sort" id="heading-user-fullName" onclick="changeUserSort('fullName')" ></i> </th>
+                    <th style="width: 200px;">Username  </th>
+                    <th>Email </i> </th>
+                    <th style="width: 150px;">Group  <i class="fa fa-fw fa-sort" id="heading-user-group" onclick="changeUserSort('groupName')" ></i> </th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination" id="pagination">
+
+            </ul>
+          </nav>
+
+    </div>
+
+
+    <!-- success alert -->
+    <div class="alert alert-success" id="success-alert" style="display: none;">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <strong>Success! </strong>
+    </div>
+</div>
