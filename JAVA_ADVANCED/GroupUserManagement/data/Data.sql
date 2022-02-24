@@ -23,17 +23,17 @@ VALUES
 
 -- Add data `user`
 -- pass: 123456
-INSERT INTO `user`	(email								,	`password`														, username			, firstName		,lastName				, 		groupID			, 	createDate	,	`role`			)
-VALUES 				('haidang29productions@gmail.com'	,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'dangblack'		,'Dang'			,		'Nguyen Hai'	,   		'5'			, 	'2020-03-05',	'Manager'		),
-					('account1@gmail.com'				,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'quanganh'		,'Anh'			,		'Tong Quang'	,   		'1'			,	'2020-03-05',	'Manager'		),
-                    ('account2@gmail.com'				,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'vanchien'		,'Chien'		,		'Nguyen Van'	,   		'2'			,	'2020-03-07',	'User'			),
-                    ('account3@gmail.com'				,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'cocoduongqua'	,'Do'			,		'Duong'			,   		'3'			,	'2020-03-08',	'User'			),
-                    ('account4@gmail.com'				,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'doccocaubai'		,'Thang'		,		'Nguyen Chien'  ,   		'4'			,	'2020-03-10',	'User'			),
-                    ('dapphatchetngay@gmail.com'		,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'khabanh'			,'Kha'			,		'Ngo Ba'		,   		'6'			,	NOW()		,	'User'			),
-                    ('songcodaoly@gmail.com'			,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'huanhoahong'		,'Huan'			,		'Bui Xuan'		,   		'7'			,	NOW()		,	'User'			),
-                    ('sontungmtp@gmail.com'				,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'tungnui'			,'Tung'			,		'Nguyen Thanh'	,   		'8'			,	'2020-04-07',	'Manager'		),
-                    ('duongghuu@gmail.com'				,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'duongghuu'		,'Huu'			,		'Duong Van'		,   		'9'			,	'2020-04-07',	'User'			),
-                    ('vtiaccademy@gmail.com'			,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'vtiaccademy'		,'Ai'			,		'Vi Ti'			,   		'10'		,	'2020-04-09',	'Manager'		);
+INSERT INTO `user`	(email								,	`password`														, username			, firstName		,lastName				, 		groupID			, 	createDate	,	`role`			, 	`status`	)
+VALUES 				('haidang29productions@gmail.com'	,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'dangblack'		,'Dang'			,		'Nguyen Hai'	,   		'5'			, 	'2020-03-05',	'Manager'		,   		0	),
+					('account1@gmail.com'				,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'quanganh'		,'Anh'			,		'Tong Quang'	,   		'1'			,	'2020-03-05',	'Manager'		,   		0	),
+                    ('account2@gmail.com'				,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'vanchien'		,'Chien'		,		'Nguyen Van'	,   		'2'			,	'2020-03-07',	'User'			,   		0	),
+                    ('account3@gmail.com'				,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'cocoduongqua'	,'Do'			,		'Duong'			,   		'3'			,	'2020-03-08',	'User'			,   		0	),
+                    ('account4@gmail.com'				,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'doccocaubai'		,'Thang'		,		'Nguyen Chien'  ,   		'4'			,	'2020-03-10',	'User'			,   		0	),
+                    ('dapphatchetngay@gmail.com'		,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'khabanh'			,'Kha'			,		'Ngo Ba'		,   		'6'			,	NOW()		,	'User'			,   		0	),
+                    ('songcodaoly@gmail.com'			,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'huanhoahong'		,'Huan'			,		'Bui Xuan'		,   		'7'			,	NOW()		,	'User'			,   		0	),
+                    ('sontungmtp@gmail.com'				,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'tungnui'			,'Tung'			,		'Nguyen Thanh'	,   		'8'			,	'2020-04-07',	'Manager'		,   		0	),
+                    ('duongghuu@gmail.com'				,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'duongghuu'		,'Huu'			,		'Duong Van'		,   		'9'			,	'2020-04-07',	'User'			,   		0	),
+                    ('vtiaccademy@gmail.com'			,	'$2a$10$W2neF9.6Agi6kAKVq8q3fec5dHW8KUA.b0VSIGdIZyUravfLpyIFi'	, 'vtiaccademy'		,'Ai'			,		'Vi Ti'			,   		'10'		,	'2020-04-09',	'Manager'		,   		0	);
                     
 ALTER TABLE `group`
 ADD FOREIGN KEY (creatorID) REFERENCES `user`(userID)

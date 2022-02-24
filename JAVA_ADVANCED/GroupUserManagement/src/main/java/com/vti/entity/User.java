@@ -1,5 +1,6 @@
 package com.vti.entity;
 
+import com.vti.entity.enumurate.UserStatus;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Formula;
 
@@ -56,7 +57,19 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "creator")
     private List<Group> createdGroup;
 
+    @Enumerated(EnumType.ORDINAL)
+    @Column (name = "`status`", nullable = false)
+    private UserStatus status = UserStatus.NOT_ACTIVE;
+
     public User() {
+    }
+
+    public UserStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(UserStatus status) {
+        this.status = status;
     }
 
     public short getId() {

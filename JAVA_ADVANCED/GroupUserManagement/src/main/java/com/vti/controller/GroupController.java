@@ -1,6 +1,6 @@
 package com.vti.controller;
 
-import com.vti.dto.UserDTO;
+import com.vti.dto.UserInfoDTO;
 import com.vti.dto.GroupDTO;
 import com.vti.dto.DetailGroupDTO;
 import com.vti.entity.Group;
@@ -34,7 +34,7 @@ public class GroupController {
         Page<GroupDTO> dtoPage = entitiesPage.map( new Function<Group, GroupDTO>() {
             @Override
             public GroupDTO apply(Group entity) {
-                UserDTO userDTO = new UserDTO(entity.getCreator().getId(), entity.getCreator().getFullName());
+                UserInfoDTO userDTO = new UserInfoDTO(entity.getCreator().getId(), entity.getCreator().getFullName());
                 GroupDTO dto = new GroupDTO(
                         entity.getId(),
                         entity.getName(),
@@ -50,7 +50,7 @@ public class GroupController {
     public ResponseEntity<?> getGroupById (@PathVariable (name = "id") short id){
         Group entity = service.getGroupById(id);
 
-        UserDTO userDTO = new UserDTO(entity.getCreator().getId(), entity.getCreator().getFullName());
+        UserInfoDTO userDTO = new UserInfoDTO(entity.getCreator().getId(), entity.getCreator().getFullName());
         DetailGroupDTO dto = new DetailGroupDTO(
                 entity.getId(),
                 entity.getName(),

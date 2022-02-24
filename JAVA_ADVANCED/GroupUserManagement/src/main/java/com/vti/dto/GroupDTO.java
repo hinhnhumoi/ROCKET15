@@ -9,12 +9,12 @@ public class GroupDTO {
 
     private String name;
 
-    private UserDTO creator;
+    private UserInfoDTO creator;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date createDate;
 
-    public GroupDTO(short id, String name, UserDTO creator, Date createDate) {
+    public GroupDTO(short id, String name, UserInfoDTO creator, Date createDate) {
         this.id = id;
         this.name = name;
         this.creator = creator;
@@ -32,7 +32,7 @@ public class GroupDTO {
         return name;
     }
 
-    public UserDTO getCreator() {
+    public UserInfoDTO getCreator() {
         return creator;
     }
 
